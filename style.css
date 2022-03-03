@@ -121,3 +121,9 @@ p.subtitle {
   box-shadow: inset -1px -1px 1px 1px #ccc;
   text-transform: uppercase;
 }
+
+.key.highlight {
+  background-color: blueviolet;
+  color: white ;
+  box-shadow:  inset -1px -1px 1px 1px #333;
+}

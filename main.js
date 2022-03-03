@@ -210,7 +210,7 @@ function animate() {
     const now = Date.now();
     if (now - then >= 1000) {
         FPS++;
-        score.innerHTML = `SCORE: ${FPS}`;
+        score.innerHTML = `SCORE: <span class="highlight key">${FPS}<span>`;
         if (FPS % 3 === 0) {
             obstacles.push(new Obstacle(), new Obstacle());
         }
