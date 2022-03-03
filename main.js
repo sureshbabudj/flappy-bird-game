@@ -133,6 +133,7 @@ let promises = [];
 const instruction = document.querySelector(".subtitle");
 const score = document.querySelector(".score");
 const gameOverEl = document.querySelector("#gameOver");
+const restartEl = document.querySelector("#restart");
 
 function gameOver() {
     score.innerHTML = "";
@@ -151,6 +152,7 @@ function restart() {
     animate();
 }
 
+restartEl.addEventListener("click", restart);
 
 function init() {
     game = { ready: false, over: false, pause: false };
@@ -226,7 +228,7 @@ addEventListener("keydown", function ({ key }) {
         else restart();
     }
     if ((key === 'p' || key === 'P') && game.ready) {
-        game.pause = !game.pause;
+        game.pause = true;
         instruction.innerHTML = game.pause ? instructions.resume : instructions.pause;
     }
 });
